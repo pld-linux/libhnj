@@ -2,9 +2,10 @@ Summary:	Libhnj Library
 Summary(pl):	Biblioteka Libhnj
 Name:		libhnj
 Version:	0.1.1
-Release:	2
+Release:	3
 License:	LGPL/MPL
 Group:		Libraries
+Group(de):	Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/libhnj/%{name}-%{version}.tar.gz
@@ -22,6 +23,7 @@ Libhnj jest bibliotek± wysokiej jako¶ci hypenacji i justyfikacji.
 Summary:	Header files etc to develop libhnj applications
 Summary(pl):	Pliki nag³ówkowe i inne dla libhnj
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -37,6 +39,7 @@ tworzeniu aplikacji opartych o t± bibliotekê.
 Summary:	Static libhnj libraries
 Summary(pl):	Biblioteka statyczna libhnj
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
@@ -51,7 +54,6 @@ Biblioteka statyczna libhnj.
 %setup -q
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
@@ -60,8 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf AUTHORS ChangeLog NEWS README*
 
