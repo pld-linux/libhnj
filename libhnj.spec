@@ -2,8 +2,8 @@ Summary:	Libhnj Library
 Summary(pl):	Biblioteka Libhnj
 Name:		libhnj
 Version:	0.1.1
-Release:	4
-License:	LGPL/MPL
+Release:	6
+License:	MPL/LGPL
 Group:		Libraries
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/libhnj/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
@@ -69,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc {AUTHORS,ChangeLog,NEWS,README*}.gz
+%doc AUTHORS ChangeLog NEWS README*
 %attr(755,root,root) %{_bindir}/libhnj-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
