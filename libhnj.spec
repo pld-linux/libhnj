@@ -2,7 +2,7 @@ Summary:	Libhnj Library
 Summary(pl):	Biblioteka Libhnj
 Name:		libhnj
 Version:	0.1.1
-Release:	3
+Release:	4
 License:	LGPL/MPL
 Group:		Libraries
 Group(de):	Libraries
@@ -52,6 +52,7 @@ Biblioteka statyczna libhnj.
 %setup -q
 
 %build
+autoconf
 %configure
 %{__make}
 
