@@ -37,7 +37,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static libhnj libraries.
 
-%description -l pl static
+%description static -l pl
 Biblioteka statyczna libhnj.
 
 %prep
