@@ -1,0 +1,24 @@
+diff -Nur libhnj-0.1.1-orig/hsjust.c libhnj-0.1.1/hsjust.c
+--- libhnj-0.1.1-orig/hsjust.c	1999-02-11 22:40:26.000000000 +0100
++++ libhnj-0.1.1/hsjust.c	2004-08-28 09:51:39.460429696 +0200
+@@ -42,7 +42,7 @@
+    */
+ 
+ int
+-hnj_hs_just (const HnjBreak *breaks, int n_breaks,
++hnj_hs_just (HnjBreak *breaks, int n_breaks,
+ 	     const HnjParams *params, int *result)
+ {
+   int set_width = params->set_width;
+diff -Nur libhnj-0.1.1-orig/hsjust.h libhnj-0.1.1/hsjust.h
+--- libhnj-0.1.1-orig/hsjust.h	1999-02-11 16:52:30.000000000 +0100
++++ libhnj-0.1.1/hsjust.h	2004-08-28 09:51:48.787011840 +0200
+@@ -43,7 +43,7 @@
+ #endif /* __cplusplus */
+ 
+ /* Return value is number of breaks in result. */
+-int hnj_hs_just (const HnjBreak *breaks, int n_breaks,
++int hnj_hs_just (HnjBreak *breaks, int n_breaks,
+ 		 const HnjParams *params, int *result);
+ 
+ #ifdef __cplusplus
