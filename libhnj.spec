@@ -5,7 +5,8 @@ Version:	0.1.1
 Release:	6
 License:	MPL/LGPL
 Group:		Libraries
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/libhnj/%{name}-%{version}.tar.gz
+# formerly ftp://ftp.gnome.org/pub/GNOME/stable/sources/libhnj/
+Source0:	http://hkn.eecs.berkeley.edu/~dyoo/pyHnj/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
