@@ -7,7 +7,7 @@ Copyright:	LGPL/MPL
 Group:		Libraries
 Group(pl):	Biblioteki
 Source:		ftp://ftp.gnome.org/pub/GNOME/stable/sources/libhnj/%{name}-%{version}.tar.gz
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_datadir	/usr/share
