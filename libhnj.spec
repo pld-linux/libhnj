@@ -55,8 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
-gzip -9nf AUTHORS ChangeLog NEWS README*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
