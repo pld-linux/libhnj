@@ -29,7 +29,7 @@ Header files etc you can use to develop libhnj applications.
 
 %description devel -l pl
 Pakiet ten zawiera pliki nag³ówkowe i inne dla libhnj niezbêdne przy
-tworzeniu aplikacji opartych o t± bibliotekê.
+tworzeniu aplikacji opartych o tê bibliotekê.
 
 %package static
 Summary:	Static libhnj libraries
