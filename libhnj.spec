@@ -68,7 +68,7 @@ gzip -9nf AUTHORS ChangeLog NEWS README*
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(755,root,root) %{_libdir}/lib*.so.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
