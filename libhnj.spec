@@ -9,6 +9,7 @@ Group:		Libraries
 Source0:	http://hkn.eecs.berkeley.edu/~dyoo/pyHnj/%{name}-%{version}.tar.gz
 # Source0-md5:	29f5571af559690e916b1c7b1aa6aa1f
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
