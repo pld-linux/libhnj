@@ -11,6 +11,7 @@ Source0:	http://hkn.eecs.berkeley.edu/~dyoo/pyHnj/%{name}-%{version}.tar.gz
 Patch0:		%{name}-const-error.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,7 +50,10 @@ Biblioteka statyczna libhnj.
 %patch0 -p1
 
 %build
+%{__libtoolize}
+%{__aclocal}
 %{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
