@@ -2,7 +2,7 @@ Summary:	Libhnj Library
 Summary(pl):	Biblioteka Libhnj
 Name:		libhnj
 Version:	0.1.1
-Release:	7
+Release:	8
 License:	MPL/LGPL
 Group:		Libraries
 # formerly ftp://ftp.gnome.org/pub/GNOME/stable/sources/libhnj/
