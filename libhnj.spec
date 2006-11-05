@@ -18,13 +18,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Libhnj is a library for high quality hyphenation and justification.
 
 %description -l pl
-Libhnj jest bibliotek± wysokiej jako¶ci hypenacji i justyfikacji.
+Libhnj jest bibliotek± wysokiej jako¶ci przenoszenia wyrazów i
+justowania.
 
 %package devel
 Summary:	Header files etc to develop libhnj applications
 Summary(pl):	Pliki nag³ówkowe i inne dla libhnj
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files etc you can use to develop libhnj applications.
@@ -37,7 +38,7 @@ tworzeniu aplikacji opartych o tê bibliotekê.
 Summary:	Static libhnj libraries
 Summary(pl):	Biblioteka statyczna libhnj
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libhnj libraries.
