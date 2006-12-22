@@ -1,0 +1,11 @@
+--- libhnj-0.1.1/libhnj.m4.orig	1999-02-11 16:52:41.000000000 +0100
++++ libhnj-0.1.1/libhnj.m4	2006-12-22 22:01:02.932616516 +0100
+@@ -8,7 +8,7 @@
+ dnl AM_PATH_LIBHNJ([MINIMUM-VERSION, [ACTION-IF-FOUND [, ACTION-IF-NOT-FOUND]]])
+ dnl Test for LIBHNJ, and define LIBHNJ_CFLAGS and LIBHNJ_LIBS
+ dnl
+-AC_DEFUN(AM_PATH_LIBHNJ,
++AC_DEFUN([AM_PATH_LIBHNJ],
+ [dnl 
+ dnl Get the cflags and libraries from the libhnj-config script
+ dnl
