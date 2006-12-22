@@ -2,13 +2,14 @@ Summary:	Libhnj Library
 Summary(pl):	Biblioteka Libhnj
 Name:		libhnj
 Version:	0.1.1
-Release:	8
-License:	MPL/LGPL
+Release:	9
+License:	LGPL v2+ or MPL v1.0
 Group:		Libraries
 # formerly ftp://ftp.gnome.org/pub/GNOME/stable/sources/libhnj/
 Source0:	http://hkn.eecs.berkeley.edu/~dyoo/pyHnj/%{name}-%{version}.tar.gz
 # Source0-md5:	29f5571af559690e916b1c7b1aa6aa1f
 Patch0:		%{name}-const-error.patch
+Patch1:		%{name}-am18.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -49,6 +50,7 @@ Biblioteka statyczna libhnj.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -73,17 +75,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%doc AUTHORS ChangeLog NEWS README*
+%attr(755,root,root) %{_libdir}/libhnj.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README*
 %attr(755,root,root) %{_bindir}/libhnj-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libhnj.so
+%{_libdir}/libhnj.la
 %{_includedir}/libhnj
-%{_aclocaldir}/*
+%{_aclocaldir}/libhnj.m4
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/libhnj.a
