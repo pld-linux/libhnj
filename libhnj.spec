@@ -1,5 +1,5 @@
 Summary:	Libhnj Library
-Summary(pl):	Biblioteka Libhnj
+Summary(pl.UTF-8):   Biblioteka Libhnj
 Name:		libhnj
 Version:	0.1.1
 Release:	9
@@ -18,33 +18,33 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Libhnj is a library for high quality hyphenation and justification.
 
-%description -l pl
-Libhnj jest bibliotek± wysokiej jako¶ci przenoszenia wyrazów i
+%description -l pl.UTF-8
+Libhnj jest bibliotekÄ… wysokiej jakoÅ›ci przenoszenia wyrazÃ³w i
 justowania.
 
 %package devel
 Summary:	Header files etc to develop libhnj applications
-Summary(pl):	Pliki nag³ówkowe i inne dla libhnj
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i inne dla libhnj
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files etc you can use to develop libhnj applications.
 
-%description devel -l pl
-Pakiet ten zawiera pliki nag³ówkowe i inne dla libhnj niezbêdne przy
-tworzeniu aplikacji opartych o tê bibliotekê.
+%description devel -l pl.UTF-8
+Pakiet ten zawiera pliki nagÅ‚Ã³wkowe i inne dla libhnj niezbÄ™dne przy
+tworzeniu aplikacji opartych o tÄ™ bibliotekÄ™.
 
 %package static
 Summary:	Static libhnj libraries
-Summary(pl):	Biblioteka statyczna libhnj
+Summary(pl.UTF-8):   Biblioteka statyczna libhnj
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libhnj libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna libhnj.
 
 %prep
