@@ -1,5 +1,5 @@
 Summary:	Libhnj Library
-Summary(pl.UTF-8):   Biblioteka Libhnj
+Summary(pl.UTF-8):	Biblioteka Libhnj
 Name:		libhnj
 Version:	0.1.1
 Release:	9
@@ -24,7 +24,7 @@ justowania.
 
 %package devel
 Summary:	Header files etc to develop libhnj applications
-Summary(pl.UTF-8):   Pliki nagłówkowe i inne dla libhnj
+Summary(pl.UTF-8):	Pliki nagłówkowe i inne dla libhnj
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -37,7 +37,7 @@ tworzeniu aplikacji opartych o tę bibliotekę.
 
 %package static
 Summary:	Static libhnj libraries
-Summary(pl.UTF-8):   Biblioteka statyczna libhnj
+Summary(pl.UTF-8):	Biblioteka statyczna libhnj
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
