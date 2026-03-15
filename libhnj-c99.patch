@@ -1,0 +1,64 @@
+--- libhnj-0.1.1/parseAFM.c.orig	2026-03-15 01:44:13.786571652 +0100
++++ libhnj-0.1.1/parseAFM.c	2026-03-15 01:44:44.533656691 +0100
+@@ -51,6 +51,8 @@
+ 
+ #include <stdio.h>
+ #include <errno.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <sys/file.h>
+ #include <math.h>
+ #include "parseAFM.h"
+@@ -493,7 +495,7 @@
+  *  parseFile to determine if there is more file to parse.
+  */
+  
+-static parseCharWidths(fp, cwi)
++static int parseCharWidths(fp, cwi)
+   FILE *fp;
+   register int *cwi;
+ {  
+@@ -594,7 +596,7 @@
+  *  parseFile to determine if there is more file to parse.
+  */
+  
+-static parseCharMetrics(fp, fi)
++static int parseCharMetrics(fp, fi)
+   FILE *fp;
+   register FontInfo *fi;
+ {  
+@@ -705,7 +707,7 @@
+  *  parseFile to determine if there is more file to parse.
+  */
+  
+-static parseTrackKernData(fp, fi)
++static int parseTrackKernData(fp, fi)
+   FILE *fp;
+   register FontInfo *fi;
+ {  
+@@ -809,7 +811,7 @@
+  *  parseFile to determine if there is more file to parse.
+  */
+  
+-static parsePairKernData(fp, fi)
++static int parsePairKernData(fp, fi)
+   FILE *fp;
+   register FontInfo *fi;
+ {  
+@@ -935,7 +937,7 @@
+  *  parseFile to determine if there is more file to parse.
+  */
+  
+-static parseCompCharData(fp, fi)
++static int parseCompCharData(fp, fi)
+   FILE *fp;
+   register FontInfo *fi;
+ {  
+--- libhnj-0.1.1/parseAFM.h.orig	2026-03-15 01:44:14.073238318 +0100
++++ libhnj-0.1.1/parseAFM.h	2026-03-15 01:44:49.571415591 +0100
+@@ -318,4 +318,4 @@
+  *  The possible return codes from parseFile are defined above.
+  */
+ 
+-extern int parseFile ( /* FILE *fp; FontInfo **fi; FLAGS flags; */ ); 
++extern int parseFile (FILE *fp, FontInfo **fi, FLAGS flags);

@@ -2,7 +2,7 @@ Summary:	Libhnj Library
 Summary(pl.UTF-8):	Biblioteka Libhnj
 Name:		libhnj
 Version:	0.1.1
-Release:	10
+Release:	11
 License:	LGPL v2+ or MPL v1.0
 Group:		Libraries
 # formerly ftp://ftp.gnome.org/pub/GNOME/stable/sources/libhnj/
@@ -10,6 +10,7 @@ Source0:	http://hkn.eecs.berkeley.edu/~dyoo/pyHnj/%{name}-%{version}.tar.gz
 # Source0-md5:	29f5571af559690e916b1c7b1aa6aa1f
 Patch0:		%{name}-const-error.patch
 Patch1:		%{name}-am18.patch
+Patch2:		%{name}-c99.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -51,6 +52,7 @@ Biblioteka statyczna libhnj.
 %setup -q
 %patch -P0 -p1
 %patch -P1 -p1
+%patch -P2 -p1
 
 %build
 %{__libtoolize}
